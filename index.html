@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Edward Madison Apartments and Real Estate Management</title>
+  <meta name="description" content="Explore apartment rentals and land purchase opportunities with Edward Madison Apartments and Real Estate Management.">
+  <meta name="theme-color" content="#142c25">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">
+        <span class="brand-mark">EM</span>
+        <span class="brand-name">
+          EDWARD MADISON
+          <small>APARTMENTS & REAL ESTATE MANAGEMENT</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#rentals">Apartments</a>
+        <a href="#land">Land</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-button">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR PROPERTY, OUR PRIORITY</span>
+          <h1>Find a place to call <em>home.</em></h1>
+          <p>
+            Discover apartment rentals and land purchase opportunities
+            with a property management service focused on clear
+            communication and helping you find the right fit.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#rentals" class="btn btn-primary">Explore Apartments ↗</a>
+            <a href="#land" class="btn btn-outline">Browse Land</a>
+          </div>
+
+          <div class="hero-note">
+            <span class="status-dot"></span>
+            Apartment rentals • Land enquiries • Property support
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern residential property"
+          >
+          <div class="hero-card">
+            <span class="mini-label">PROPERTY SERVICES</span>
+            <h3>Space for your next chapter.</h3>
+            <p>Rental and land enquiries made straightforward.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-section">
+      <div class="container">
+        <form class="search-panel" id="propertySearch">
+          <div class="search-field">
+            <label for="propertyType">I'm looking for</label>
+            <select id="propertyType">
+              <option value="all">All properties</option>
+              <option value="apartment">Apartment rentals</option>
+              <option value="land">Land for purchase</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="locationSearch">Preferred location</label>
+            <input id="locationSearch" type="text"
+              placeholder="Enter a city or area">
+          </div>
+
+          <button class="btn btn-primary search-button" type="submit">
+            Search Properties
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- APARTMENTS -->
+    <section class="section" id="rentals">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">APARTMENT RENTALS</span>
+            <h2>Find your next <em>home.</em></h2>
+          </div>
+          <p>
+            Explore different types of homes and tell us what you need.
+            Availability, prices and lease terms must be confirmed directly.
+          </p>
+        </div>
+
+        <div class="property-grid">
+          <article class="property-card" data-type="apartment"
+            data-location="seattle">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+                alt="Bright modern apartment interior" loading="lazy">
+              <span class="property-tag">Apartment</span>
+            </div>
+            <div class="property-info">
+              <span class="property-category">MODERN LIVING</span>
+              <h3>Modern Apartment</h3>
+              <p class="property-location">⌖ Location confirmed on enquiry</p>
+              <p>Contemporary living space for individuals, couples or small households.</p>
+              <div class="property-footer">
+                <span class="price-text">Ask for pricing</span>
+                <a href="#contact" class="text-link"
+                  data-interest="Apartment rental">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-type="apartment"
+            data-location="seattle">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+                alt="Spacious apartment living room" loading="lazy">
+              <span class="property-tag">Apartment</span>
+            </div>
+            <div class="property-info">
+              <span class="property-category">MORE ROOM</span>
+              <h3>Spacious Family Home</h3>
+              <p class="property-location">⌖ Location confirmed on enquiry</p>
+              <p>Ask about available homes, bedroom options and lease conditions.</p>
+              <div class="property-footer">
+                <span class="price-text">Ask for pricing</span>
+                <a href="#contact" class="text-link"
+                  data-interest="Apartment rental">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-type="apartment"
+            data-location="seattle">
+            <div class="property-image">
+              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+                alt="Elegant residential interior" loading="lazy">
+              <span class="property-tag">Apartment</span>
+            </div>
+            <div class="property-info">
+              <span class="property-category">COMFORT & STYLE</span>
+              <h3>Contemporary Living</h3>
+              <p class="property-location">⌖ Location confirmed on enquiry</p>
+              <p>Share your budget and preferred area to discuss suitable options.</p>
+              <div class="property-footer">
+                <span class="price-text">Ask for pricing</span>
+                <a href="#contact" class="text-link"
+                  data-interest="Apartment rental">Enquire ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="notice">
+          These are illustrative property cards, not verified current listings.
+          Images are for presentation only.
+        </p>
+      </div>
+    </section>
+
+    <!-- LAND -->
+    <section class="section section-soft" id="land">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">LAND PURCHASE</span>
+            <h2>Room to build <em>your future.</em></h2>
+          </div>
+          <p>
+            Tell us where you want to buy, your intended use and your budget
+            so we can discuss relevant land opportunities.
+          </p>
+        </div>
+
+        <div class="land-grid">
+          <article class="land-card" data-type="land"
+            data-location="seattle">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85"
+              alt="Open land and green fields" loading="lazy">
+            <div class="land-overlay">
+              <span class="property-tag">Land enquiry</span>
+              <h3>Residential Land</h3>
+              <p>For a potential future home or residential development.</p>
+              <a href="#contact" class="btn btn-light"
+                data-interest="Land purchase">Enquire about land ↗</a>
+            </div>
+          </article>
+
+          <article class="land-card" data-type="land"
+            data-location="seattle">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+              alt="Expansive natural landscape" loading="lazy">
+            <div class="land-overlay">
+              <span class="property-tag">Land enquiry</span>
+              <h3>Development Land</h3>
+              <p>Discuss location, intended use, access and documentation.</p>
+              <a href="#contact" class="btn btn-light"
+                data-interest="Land purchase">Discuss your plans ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="land-disclaimer">
+          <strong>Before purchasing land</strong>
+          <p>
+            Independently verify ownership, title documents, survey details,
+            zoning, access, restrictions and any applicable taxes or fees
+            with qualified local professionals and the relevant authorities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Property support, <em>made clear.</em></h2>
+          </div>
+          <p>
+            Start a conversation about your property needs and the next
+            steps involved.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <h3>Apartment Rental Enquiries</h3>
+            <p>
+              Discuss your preferred location, budget, household needs
+              and potential lease options.
+            </p>
+            <a href="#contact" class="text-link"
+              data-interest="Apartment rental">Make an enquiry ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <h3>Land Purchase Enquiries</h3>
+            <p>
+              Share your intended use, preferred area, budget and
+              approximate plot or land requirements.
+            </p>
+            <a href="#contact" class="text-link"
+              data-interest="Land purchase">Discuss land ↗</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <h3>Property Management</h3>
+            <p>
+              Contact us to discuss property management needs and the
+              services that may be available for your property.
+            </p>
+            <a href="#contact" class="text-link"
+              data-interest="Property management">Contact our team ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1100&q=85"
+            alt="Welcoming modern residential property" loading="lazy">
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">ABOUT THE FIRM</span>
+          <h2>Helping you take the <em>next step.</em></h2>
+          <p>
+            Edward Madison Apartments and Real Estate Management provides
+            a point of contact for people exploring apartment rentals,
+            land purchase opportunities and property management enquiries.
+          </p>
+          <p>
+            Every property, price, location and transaction detail should
+            be confirmed directly before you make a commitment.
+          </p>
+
+          <div class="about-points">
+            <div><span>✓</span> Clear property enquiries</div>
+            <div><span>✓</span> Needs-based discussions</div>
+            <div><span>✓</span> Direct contact for next steps</div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Talk to Us ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="container">
+        <div class="center-heading">
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>Start with three <em>simple steps.</em></h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span>01</span>
+            <h3>Tell us what you need</h3>
+            <p>Share your preferred property type, location and budget.</p>
+          </article>
+          <article class="step-card">
+            <span>02</span>
+            <h3>Discuss the options</h3>
+            <p>Contact the firm to confirm available options and details.</p>
+          </article>
+          <article class="step-card">
+            <span>03</span>
+            <h3>Verify before committing</h3>
+            <p>Review documents, terms, costs and property details before proceeding.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">GET IN TOUCH</span>
+          <h2>Let's discuss your <em>property needs.</em></h2>
+          <p>
+            Tell us whether you are looking to rent an apartment, purchase
+            land or discuss property management.
+          </p>
+
+          <div class="contact-details">
+            <a href="tel:+19252914577">
+              <span class="contact-icon">☎</span>
+              <span><small>Phone</small>(925) 291-4577</span>
+            </a>
+
+            <a href="mailto:edwardmadison718@gmail.com">
+              <span class="contact-icon">✉</span>
+              <span><small>Email</small>edwardmadison718@gmail.com</span>
+            </a>
+
+            <div class="contact-address">
+              <span class="contact-icon">⌖</span>
+              <span><small>Work address</small>221 Minor Ave N, Seattle, WA</span>
+            </div>
+          </div>
+        </div>
+
+        <form
+  class="contact-form"
+  id="contactForm"
+  action="https://formspree.io/f/xqpavzay"
+  method="POST"
+>
+
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="name" type="text"
+            placeholder="Your full name" required>
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email"
+            placeholder="you@example.com" required>
+
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel"
+            placeholder="Your contact number">
+
+          <label for="interest">I'm interested in</label>
+          <select id="interest" name="interest" required>
+            <option value="">Choose an option</option>
+            <option value="Apartment rental">Apartment rental</option>
+            <option value="Land purchase">Land purchase</option>
+            <option value="Property management">Property management</option>
+            <option value="Apartment rental and land purchase">Both rental and land</option>
+          </select>
+
+          <label for="message">Location, budget and requirements</label>
+          <textarea id="message" name="message" rows="4"
+            placeholder="Describe the location, budget, number of bedrooms or land requirements..."
+            required></textarea>
+
+          <button class="btn btn-primary submit-button" type="submit">
+  Send Enquiry ↗
+          </button>
+
+          <p class="form-note" id="formNote" aria-live="polite">
+            This form opens your email app. It does not automatically submit
+            or store your information on a server.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">EM</span>
+        <span class="brand-name">
+          EDWARD MADISON
+          <small>APARTMENTS & REAL ESTATE MANAGEMENT</small>
+        </span>
+      </a>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Edward Madison Apartments and Real Estate Management.</span>
+      <span>Apartments • Land • Property Management</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1128 @@
+
+/* =========================================
+   EDWARD MADISON REAL ESTATE
+   Main stylesheet
+========================================= */
+
+:root {
+  --green: #173d31;
+  --green-dark: #102a22;
+  --green-light: #e7efe9;
+  --gold: #c79d60;
+  --cream: #f8f7f2;
+  --white: #ffffff;
+  --text: #202b25;
+  --muted: #69736c;
+  --border: #e4e8e3;
+  --shadow: 0 18px 50px rgba(20, 45, 34, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.container {
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-soft {
+  background: var(--cream);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  letter-spacing: -1.5px;
+}
+
+h1 em,
+h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: var(--green);
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 72px);
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+p {
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 49px;
+  padding: 13px 21px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  color: var(--white);
+  background: var(--green);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: var(--green);
+  background: transparent;
+  border-color: #cdd8d0;
+}
+
+.btn-outline:hover {
+  background: var(--green-light);
+}
+
+.btn-light {
+  color: var(--green-dark);
+  background: var(--white);
+}
+
+.btn-light:hover {
+  background: var(--cream);
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.nav-wrap {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 4px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: 1.5;
+}
+
+.brand-name small {
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4f5b53;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+.nav .nav-button {
+  padding: 11px 16px;
+  color: var(--white);
+  background: var(--green);
+  border-radius: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  color: var(--green);
+  background: transparent;
+  border: 0;
+  font-size: 27px;
+}
+
+/* HERO */
+
+.hero {
+  padding: 80px 0 95px;
+  background:
+    radial-gradient(circle at 10% 15%, #eef3ed 0, transparent 32%),
+    var(--cream);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.hero-copy > p {
+  max-width: 530px;
+  margin-top: 22px;
+  font-size: 15px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 27px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #55956b;
+  border-radius: 50%;
+}
+
+.hero-visual {
+  min-height: 440px;
+  position: relative;
+}
+
+.hero-visual > img {
+  height: 440px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  position: absolute;
+  left: -35px;
+  bottom: 28px;
+  width: min(290px, 85%);
+  padding: 24px;
+  background: var(--white);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.mini-label {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.hero-card h3 {
+  margin: 9px 0;
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.hero-card p {
+  font-size: 12px;
+}
+
+/* SEARCH */
+
+.search-section {
+  position: relative;
+  z-index: 5;
+  margin-top: -31px;
+}
+
+.search-panel {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr auto;
+  align-items: end;
+  gap: 20px;
+  padding: 23px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  box-shadow: var(--shadow);
+}
+
+.search-field label,
+.contact-form label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 12px;
+  color: var(--text);
+  background: #fbfcfa;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: var(--green);
+}
+
+.search-button {
+  min-height: 45px;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 42px;
+}
+
+.section-heading > p {
+  max-width: 420px;
+  font-size: 13px;
+}
+
+.section-heading h2 {
+  max-width: 600px;
+}
+
+.center-heading {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+/* APARTMENT CARDS */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.property-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.property-image {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+}
+
+.property-image img {
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.property-card:hover .property-image img {
+  transform: scale(1.04);
+}
+
+.property-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 6px 10px;
+  color: var(--green);
+  background: var(--white);
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.property-info {
+  padding: 23px;
+}
+
+.property-category {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.property-info h3 {
+  margin: 8px 0;
+  font-size: 20px;
+}
+
+.property-info > p {
+  margin-top: 9px;
+  font-size: 12px;
+}
+
+.property-location {
+  color: #52695a;
+}
+
+.property-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.price-text {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.text-link {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.text-link:hover {
+  color: var(--gold);
+}
+
+.notice {
+  margin-top: 20px;
+  font-size: 11px;
+}
+
+/* LAND */
+
+.land-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.land-card {
+  min-height: 390px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: var(--green-dark);
+}
+
+.land-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(8, 27, 20, 0.9),
+    rgba(8, 27, 20, 0.06) 90%
+  );
+}
+
+.land-card > img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.land-card:hover > img {
+  transform: scale(1.04);
+}
+
+.land-overlay {
+  position: absolute;
+  z-index: 1;
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+  color: var(--white);
+}
+
+.land-overlay .property-tag {
+  position: static;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.land-overlay h3 {
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+
+.land-overlay p {
+  max-width: 390px;
+  margin-bottom: 18px;
+  color: #e3e8e3;
+  font-size: 13px;
+}
+
+.land-disclaimer {
+  margin-top: 25px;
+  padding: 22px;
+  background: #f0f2ed;
+  border-left: 3px solid var(--gold);
+}
+
+.land-disclaimer strong {
+  font-size: 13px;
+}
+
+.land-disclaimer p {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+}
+
+.service-card {
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+.service-card:hover {
+  border-color: #b8c8bd;
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.service-number {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 23px;
+  color: var(--green);
+  background: var(--green-light);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.service-card h3 {
+  margin-bottom: 13px;
+  font-size: 20px;
+}
+
+.service-card p {
+  margin-bottom: 22px;
+  font-size: 13px;
+}
+
+/* ABOUT */
+
+.about-section {
+  background: var(--cream);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.about-image img {
+  height: 480px;
+  border-radius: 7px;
+}
+
+.about-copy > p {
+  margin-top: 17px;
+  font-size: 13px;
+}
+
+.about-points {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.about-points span {
+  margin-right: 9px;
+  color: var(--green);
+}
+
+/* PROCESS STEPS */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step-card {
+  padding: 28px;
+  border-top: 2px solid var(--gold);
+  background: var(--cream);
+}
+
+.step-card > span {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 27px;
+}
+
+.step-card h3 {
+  margin: 15px 0 10px;
+  font-size: 18px;
+}
+
+.step-card p {
+  font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: #f2f5f0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-copy > p {
+  max-width: 440px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.contact-details > a,
+.contact-address {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  color: var(--green);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.contact-details small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.contact-details a,
+.contact-address {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-details a:hover {
+  color: var(--green);
+}
+
+.contact-form {
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+  font-size: 23px;
+}
+
+.form-intro {
+  margin: 8px 0 24px;
+  font-size: 12px;
+}
+
+.contact-form label {
+  margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  color: var(--text);
+  background: #fbfcfa;
+  border: 1px solid #dfe5df;
+  border-radius: 4px;
+  outline: none;
+  font-size: 13px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--green);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+}
+
+.form-note {
+  margin-top: 13px;
+  font-size: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 35px 0 20px;
+  color: var(--white);
+  background: var(--green-dark);
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 25px;
+}
+
+.footer-brand .brand-name {
+  color: var(--white);
+}
+
+.footer-brand .brand-name small {
+  color: #bdc9c0;
+}
+
+.footer-brand .brand-mark {
+  color: var(--green-dark);
+  background: var(--white);
+}
+
+.back-top {
+  color: #e0e9e2;
+  font-size: 12px;
+}
+
+.back-top:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: #c3d0c6;
+  font-size: 10px;
+}
+
+/* TOAST */
+
+.toast {
+  position: fixed;
+  z-index: 2000;
+  right: 20px;
+  bottom: 20px;
+  max-width: calc(100% - 40px);
+  padding: 13px 18px;
+  color: var(--white);
+  background: var(--green-dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.25s;
+}
+
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* FILTERED PROPERTY CARDS */
+
+.property-card.hidden,
+.land-card.hidden {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 14px;
+  }
+
+  .nav a {
+    font-size: 11px;
+  }
+
+  .hero-grid {
+    gap: 35px;
+  }
+
+  .hero-visual,
+  .hero-visual > img {
+    min-height: 380px;
+    height: 380px;
+  }
+
+  .property-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid,
+  .about-grid {
+    gap: 40px;
+  }
+
+  .search-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .container {
+    width: min(100% - 30px, 500px);
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 11px;
+  }
+
+  .brand-name small {
+    max-width: 210px;
+    font-size: 7px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 71px;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 20px 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 5px;
+    font-size: 13px;
+  }
+
+  .nav .nav-button {
+    margin-top: 8px;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 55px 0 70px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .hero-copy > p {
+    font-size: 14px;
+  }
+
+  .hero-visual,
+  .hero-visual > img {
+    min-height: 330px;
+    height: 330px;
+  }
+
+  .hero-card {
+    left: 12px;
+    bottom: 15px;
+    padding: 18px;
+  }
+
+  .search-section {
+    margin-top: -22px;
+  }
+
+  .search-panel {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .section-heading > p {
+    margin-top: 15px;
+  }
+
+  .property-grid,
+  .land-grid,
+  .services-grid,
+  .about-grid,
+  .steps-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-image {
+    height: 240px;
+  }
+
+  .land-card {
+    min-height: 350px;
+  }
+
+  .about-image img {
+    height: 320px;
+  }
+
+  .contact-grid {
+    gap: 35px;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.hidden {
+  display: none !important;
+}
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Used by property search */
+.hidden {
+  display: none !important;
+}
